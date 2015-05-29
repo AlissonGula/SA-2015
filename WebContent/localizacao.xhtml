@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templetes/padrao.xhtml">
+	<ui:define name="header">
+	   <div class="col-md-12">
+			<h1>
+				Restaurante Olímpio <small>localização</small>
+			</h1>
+		</div>
+	</ui:define>
+	<ui:define name="content">
+	    <div class="container">
+            <div class="row">
+				<div class="col-md-6 text-center" >
+                    <div class="gmap">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d452522.4826130644!2d-48.48282475000001!3d-27.614235750000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952749bfe17eb89f%3A0xd3d6e34c9fba2a18!2sFlorian%C3%B3polis%2C+SC!5e0!3m2!1spt-BR!2sbr!4v1426110721995" width="500px" height="500px" frameborder="0" style="border:0"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-6 map-content">
+					<address>
+                        <h5>Sede</h5>
+                            <h6>1455, av.Beira Mar Norte </h6>
+					</address>
+					<div class="quandro_central">
+		                <h:graphicImage library="img" name="ponte2.gif" styleClass="img-responsive"/>
+					</div>	
+					
+                </div>
+            </div>
+        </div>
+	</ui:define>
+	
+</ui:composition>
+</html>

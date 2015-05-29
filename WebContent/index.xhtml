@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templetes/padrao.xhtml">
+	<ui:define name="col1">
+		<div class="col-md-12">
+
+			
+
+		</div>
+		<div class="col-md-6">
+			
+			
+			
+		</div>
+	</ui:define>
+<ui:define name="header">
+
+	<div class="container">
+		<div class="col-md-12">
+			<div class="page-header">
+				<div class="container">
+					<div class="col-md-12" >
+						<h1>Bem vindos </h1>
+					</div>
+				</div>
+			</div>
+	
+			<section id="main-slider" class="no-margin">
+				<div class="carousel slide">
+					<ol class="carousel-indicators">
+						<li data-target="#main-slider" data-slide-to="0" class="active"></li>
+						<li data-target="#main-slider" data-slide-to="1"></li>
+						<li data-target="#main-slider" data-slide-to="2"></li>
+						<li data-target="#main-slider" data-slide-to="3"></li>
+						<li data-target="#main-slider" data-slide-to="4"></li>
+					</ol>
+            
+					<div class="carousel-inner">
+
+						<div class="item active" style="background-image: url(img/slider/cup.jpg)">
+							<div class="container">
+								<div class="row slide-margin">
+									<div class="col-sm-6">
+										<div class="carousel-content">
+									
+										</div>
+									</div>
+
+									<div class="col-sm-6 hidden-xs animation animated-item-4">
+                                
+									</div>
+
+								</div>
+							</div>
+						</div><!--/.item-->
+
+						<div class="item" style="background-image: url(img/slider/lo.jpg)">
+							<div class="container">
+								<div class="row slide-margin">
+									<div class="col-sm-6">
+										<div class="carousel-content">
+										</div>
+									</div>
+
+									<div class="col-sm-6 hidden-xs animation animated-item-4">
+										<div class="slider-img">
+											
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div><!--/.item-->
+
+						<div class="item" style="background-image: url(img/slider/qj.jpg)">
+							<div class="container">
+								<div class="row slide-margin">
+									<div class="col-sm-6">
+										<div class="carousel-content">
+										</div>
+									</div>
+									<div class="col-sm-6 hidden-xs animation animated-item-4">
+										<div class="slider-img">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!--/.item-->
+		
+						<div class="item" style="background-image: url(img/slider/san.jpg)">
+							<div class="container">
+								<div class="row slide-margin">
+									<div class="col-sm-6">
+										<div class="carousel-content">
+											<h1 class="animation animated-item-1"></h1>
+										</div>
+									</div>
+									<div class="col-sm-6 hidden-xs animation animated-item-4">
+										<div class="slider-img">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!--/.item-->
+						<div class="item" style="background-image: url(img/slider/sus.jpg)">
+							<div class="container">
+								<div class="row slide-margin">
+									<div class="col-sm-6">
+										<div class="carousel-content">
+											<h1 class="animation animated-item-1"></h1>
+										</div>
+									</div>
+									<div class="col-sm-6 hidden-xs animation animated-item-4">
+										<div class="slider-img">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!--/.item-->
+					
+				
+					</div><!--/.carousel-inner-->
+				</div><!--/.carousel-->
+				<a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+				<a class="next hidden-xs" href="#main-slider" data-slide="next">
+					<i class="fa fa-chevron-right"></i>
+				</a>
+				</section><!--/#main-slider-->
+		</div>
+			
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+				<!-- Novidades -->
+					<h2>Novidades</h2>
+					<div class="panel-heading"><span>Barco Sushi</span></div>
+					<h:graphicImage library="img" name="sushi.gif" styleClass="img-responsive"/>
+						
+					<div class="panel-heading"><span>Especial Alemão</span></div>
+					<h:graphicImage library="img" name="alema.gif" styleClass="img-responsive"/>
+						
+					<div class="panel-heading"><span>Tacos Mexicanos</span></div>
+					<h:graphicImage library="img" name="tacos.gif" styleClass="img-responsive"/>
+		  
+			</div>
+			<div class="col-md-4">
+			
+</div>
+    </div>
+        
+	</ui:define>
+</ui:composition>
+</html>

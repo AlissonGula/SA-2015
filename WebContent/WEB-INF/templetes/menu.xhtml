@@ -1,0 +1,60 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+		
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+					
+					<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				
+			</div>
+					
+						<div class="container-fluid ficaAzul">
+		<center>
+					<h:graphicImage library="img" name="logo.png" styleClass="img-responsive"/>
+				</center>
+		</div>
+		
+		<div class="collapse navbar-collapse navbar-left">
+							<ul class="nav navbar-nav">
+							
+								<li class="active"><a href="index.xhtml">Home</a></li>
+								<li><a href="localizacao.xhtml">Localização</a></li>
+                                <li><a href="qss.xhtml">Quem Somos</a></li>
+								<li><a href="contato.xhtml">Contatos</a></li> 	
+								<li> <a href="cadastroCliente.xhtml"> Cadastro Cliente </a></li>
+															
+							</ul>
+							
+							
+							<!-- 				Menu admin -->
+				<div class="container">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-expanded="false"> 
+							<span class=""></span>Cliente
+								<span class="caret"></span>
+						</a>
+							<ul class="dropdown-menu" role="menu">
+								<li> <a href="listacliente.xhtml"> Listar Cliente </a></li>
+								<li> <a href="formcliente.xhtml"> Editar Cliente </a></li>
+								
+							</ul></li>
+					</ul>
+				</div>	
+						</div>
+		</div>
+		
+	</nav>
+</ui:composition>
