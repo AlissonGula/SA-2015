@@ -5,8 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class TipoCliente  {
-	
+public class TipoFuncionario {
+
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -24,4 +24,5 @@ public class TipoCliente  {
 	public void setNome(String nome) {
 		this.nome= nome;
 	}
+	
 }

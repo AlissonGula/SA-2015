@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templetes/padrao.xhtml">
+
+		<ui:define name="header">
+
+		<div class="col-md-12">
+			<h1>
+				Restaurante Olímpio <small>Editar Funcionário</small>
+			</h1>
+		</div>
+
+	</ui:define>
+
+	<ui:define name="content">
+	
+				<div class="col-md-6 ">
+		<h:form>
+			<h:panelGroup rendered="#{not empty funcionarioMB.funcionario.id}">
+				<h:outputLabel value="ID" />
+				<h:inputText styleClass="form-control"
+					value="#{funcionarioMB.funcionario.id}" readonly="true" />
+			</h:panelGroup>
+
+			<h:inputHidden value="#{funcionarioMB.funcionario.id}" />
+			<h:outputLabel value="Nome" />
+			<h:inputText styleClass="form-control"
+				value="#{funcionarioMB.funcionario.nome}" />
+			<h:outputLabel value="Senha" />
+			<h:inputText styleClass="form-control"
+				value="#{funcionarioMB.funcionario.senha}" />
+			<h:outputLabel value="Cpf" />
+			<h:inputText styleClass="form-control"
+				value="#{funcionarioMB.funcionario.cpf}" />
+			<h:outputLabel value="Telefone" />
+			<h:inputText styleClass="form-control"
+				value="{#funcionarioMB.funcionario.telefone}" />
+			<h:outputLabel value="email" />
+			<h:inputText styleClass="form-control"
+				value="#{funcionarioMB.funcionario.email}" />
+			<h:outputLabel value="dataNascimento" />
+			<h:inputText styleClass="form-control"
+				value="#{funcionarioMB.funcionario.dataNascimento}">
+                            <f:convertDateTime locale="pt_BR"/>
+							</h:inputText>
+			<h:outputLabel value="endereco" />
+			<h:inputText styleClass="form-control"
+				value="#{funcionarioMB.funcionario.endereco}" />
+			<h:outputLabel value="" />
+			
+			<div>
+				<h:commandButton action="#{funcionarioMB.salvar()}" value="Salvar"
+					styleClass="btn btn-success" />
+				<button class="btn btn-default" type="reset">Restaurar</button>
+			</div>
+		</h:form>
+		</div>
+	</ui:define>
+
+</ui:composition>
+</html>

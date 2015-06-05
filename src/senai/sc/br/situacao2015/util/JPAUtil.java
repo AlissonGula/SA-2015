@@ -25,7 +25,7 @@ public class JPAUtil {
 	}
 
 	static void createEntityManagerFactory() {
-		entityManagerFactory = Persistence.createEntityManagerFactory("SA-2015");		
+		entityManagerFactory = Persistence.createEntityManagerFactory("SA-2015-RO");		
 	}
 
 	static void entityManagerFactoryClose() {

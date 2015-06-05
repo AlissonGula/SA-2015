@@ -5,12 +5,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class TipoCliente  {
-	
+public class TipoMesa {
+
 	@Id
 	@GeneratedValue
 	private Long id;
-	private String nome;
+	private String hora;
+	
 	
 	public Long getId() {
 		return id;
@@ -18,10 +19,11 @@ public class TipoCliente  {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+	public String getHora() {
+		return hora;
 	}
-	public void setNome(String nome) {
-		this.nome= nome;
+	public void setHora(String hora) {
+		this.hora = hora;
 	}
+
 }

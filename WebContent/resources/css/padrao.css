@@ -386,10 +386,6 @@ body{
     background-size: 100%;
 }
 
-$(function(){
-	$('.navbar-nav a')
-		.each(function(key, el){ 
-			if(el.href == location.href) 
-				$(el.parentElement).addClass('active');
-		});
-});
+.navbar-default .navbar-nav>li>a {
+  color: #FFF;
+}
