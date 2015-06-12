@@ -32,10 +32,7 @@
 					<h:outputText value="#{item.data}" />
 				</h:column>
 				
-				<h:column>
-					<f:facet name="header">Hora</f:facet>
-					<h:outputText value="#{item.hora}" />
-				</h:column>
+				
 				
 				<h:column>
 					<f:facet name="header">Telefone</f:facet>
@@ -48,7 +45,7 @@
 						<span class="glyphicon glyphicon-edit"></span>
 					</h:commandLink>
 					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
-					<h:commandLink styleClass="btn btn-danger" onclick="return confirm('A mesa será excluido');"
+					<h:commandLink styleClass="btn btn-danger" onclick="return confirm('Sua reserva será excluida!');"
 						action="#{mesaMB.excluir(item.id)}">
 						<span class="glyphicon glyphicon-trash"></span>
 					</h:commandLink>

@@ -7,13 +7,51 @@
       animation: fadeInUp 400ms;
   }
 
+body{
+	overflow-x: hidden !important;
+}
+
   #portfolio .row {
     margin-left: -10px;
     margin-right: -10px;
   }
 
   
-
+.item1{
+	background-image: url("#{resource['/img/slider/cup.jpg']}") ;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.item2{
+	background-image: url("#{resource['/img/slider/san.jpg']}") ;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.item3{
+	background-image: url("#{resource['/img/slider/sus.jpg']}") ;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.item4{
+	background-image: url("#{resource['/img/slider/san.jpg']}") ;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.item5{
+	background-image: url("#{resource['/img/slider/cup.jpg']}") ;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% 100%;
+}
 }
 
 /* md */
@@ -373,7 +411,7 @@ small{
   border-bottom: 1px solid #D3CAAB;
 }
 .ficaAzul{
-	background-color:#162664;
+	background-color:#162664 !important;
 }
 
 

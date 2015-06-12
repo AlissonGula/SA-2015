@@ -21,6 +21,7 @@ public class Cliente {
 	private Date dataNascimento;
 	private String endereco;
 	@ManyToOne
+	
 	private TipoCliente tipoCliente;
 
 	public long getId() {
