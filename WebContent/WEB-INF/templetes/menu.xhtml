@@ -5,58 +5,59 @@
 
 	<nav class="navbar navbar-default ficaAzul">
 		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-		
+			
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-					
-					<div class="navbar-header">
+			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span> <span
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				
+
 			</div>
-					
-						<div class="container-fluid ficaAzul">
-		<center>
-					<h:graphicImage library="img" name="logo.png" styleClass="img-responsive"/>
+
+			<div class="container-fluid ficaAzul">
+				<center>
+					<h:graphicImage library="img" name="logo.png"
+						styleClass="img-responsive" />
 				</center>
-		</div>
-		
-		<div class="collapse navbar-collapse navbar-left">
-							<ul class="nav navbar-nav">
-							
-								<li class="active"><a href="index.xhtml">Home</a></li>
-								<li><a href="localizacao.xhtml">Localização</a></li>
-                                <li><a href="qss.xhtml">Quem Somos</a></li>
-								<li><a href="contato.xhtml">Contatos</a></li> 	
-								<li> <a href="cadastroCliente.xhtml"> Cadastro Cliente </a></li>
-								<li> <a href="cadastroFuncionario.xhtml"> Cadastro Funcionario </a></li>
-									<li> <a href="cadastroMesa.xhtml"> Cadastro Mesa </a></li>							
-							</ul>
-							
-							
-							<!-- 				Menu admin -->
+			</div>
+
+			<div class="collapse navbar-collapse navbar-left">
+				<ul class="nav navbar-nav">
+
+					<li><h:link outcome="/index" value="Home" /></li>
+					<li><h:link outcome="/localizacao" value="Localização" /></li>
+					<li><h:link outcome="/qss" value="Quem Somos" /></li>
+					<li><h:link outcome="/contato" value="Contatos" /></li>
+					<li><h:link outcome="/cadastroCliente"
+							value="Cadastro Cliente" /></li>
+					<li><h:link outcome="/cadastroFuncionario"
+							value="Cadastro Funcionario" /></li>
+					<li><h:link outcome="/cadastroMesa" value=" Cadastro Mesa" /></li>
+				</ul>
+
+
+				<!-- 				Menu admin -->
 				<div class="container">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown" role="button" aria-expanded="false"> 
-							<span class=""></span>Listas
-								<span class="caret"></span>
+							data-toggle="dropdown" role="button" aria-expanded="false"> <span
+								class=""></span>Listas <span class="caret"></span>
 						</a>
 							<ul class="dropdown-menu" role="menu">
-								<li> <a href="listacliente.xhtml"> Lista de Cliente </a></li>
-             					<li> <a href="listafuncionario.xhtml"> Lista de Funcionario </a></li>
-								<li> <a href="listamesa.xhtml"> Lista de Mesa </a></li>
-								
+								<li><h:link outcome="/listacliente"
+										value="Lista de Cliente" /></li>
+								<li><h:link outcome="/listafuncionario"
+										value="Lista de Funcionario" /></li>
+								<li><h:link outcome="/listamesa" value="Lista de Mesa" /></li>
+
 							</ul></li>
 					</ul>
-				</div>	
-						</div>
+				</div>
+			</div>
 		</div>
-		
+
 	</nav>
 </ui:composition>
