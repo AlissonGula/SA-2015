@@ -6,15 +6,58 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 
-<ui:composition template="">
+<ui:composition template="/WEB-INF/templetes/padrao.xhtml">
+
 	<ui:define name="header">
-	    Add your header here or delete to use the default
+
+		<div class="col-md-12">
+			<h1>
+				Restaurante Olímpio <small>Login</small>
+			</h1>
+		</div>
+
 	</ui:define>
+
+
+
 	<ui:define name="content">
-	    Add your content here or delete to use the default
+
+		<div class="col-md-4 ">
+
+			
+				<h:outputLabel value="E-mail" />
+					<h:inputText styleClass="form-control"
+						value="#{clienteMB.cliente.email}" />
+							
+							<h:outputLabel value="Senha" />
+					<h:inputSecret styleClass="form-control"
+						value="#{clienteMB.cliente.senha}" />
+			  
+			  	<br />
+		<button type="submit" class="btn btn-success">Entrar</button>
+							<input type="reset" class="btn btn-default " value="Cancelar" />
+			  
+			  </div>
+			<div class="col-md-6 center ">
+		<h:form>
+		
+		<h:column>
+					<h:commandLink styleClass="btn btn-info"
+						action="#{clienteMB.editar(item.id)}">
+						<span class="btn btn-success">Cadastre-se</span>
+					</h:commandLink>
+					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
+					
+
+</h:column>
+
+</h:form>
+</div>
 	</ui:define>
-	<ui:define name="footer">
-	    Add your footer here or delete to use the default
-	</ui:define>
+
+
+
+
+
 </ui:composition>
 </html>
