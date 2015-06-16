@@ -13,6 +13,13 @@ public class Mesa {
 	@Id
 	@GeneratedValue
 	private long id;
+	private String nome;
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 	private Date data;
 	private String hora;
 	private String telefone;
