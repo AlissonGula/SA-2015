@@ -24,19 +24,23 @@
 
 		<div class="col-md-4 ">
 
+			<h:messages globalOnly="true" styleClass="alert alert-warnning" />
+			<h:form>
+				<h:outputLabel value="E-mail" />
+				<h:inputText styleClass="form-control"
+					value="#{sessaoMB.usuarioForm.nome}" />
 
-			<h:outputLabel value="E-mail" />
-			<h:inputText styleClass="form-control"
-				value="#{clienteMB.cliente.email}" />
+				<h:outputLabel value="Senha" />
+				<h:inputSecret styleClass="form-control"
+					value="#{sessaoMB.usuarioForm.senha}" />
 
-			<h:outputLabel value="Senha" />
-			<h:inputSecret styleClass="form-control"
-				value="#{clienteMB.cliente.senha}" />
+				<br />
+				<h:commandButton styleClass="btn btn-success" value="Entrar"
+				action="#{sessaoMB.login()}" />
+				<input type="reset" class="btn btn-default " value="Cancelar" />
 
-			<br />
-			<button type="submit" class="btn btn-success">Entrar</button>
-			<input type="reset" class="btn btn-default " value="Cancelar" />
-
+			</h:form>
+	
 		</div>
 		<div class="col-md-6 center ">
 
