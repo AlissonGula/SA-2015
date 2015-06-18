@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templetes/padrao.xhtml">
+	<ui:define name="header">
+		<div class="col-md-12">
+			<h1>
+				Restaurante Olímpio <small>Segundas!</small>
+			</h1>
+			<h2>Primeira Semana (05/07/2015)</h2>
+		</div>
+	</ui:define>
+
+	<ui:define name="content">
+<h1> Pratos Tipicos Alemaos!</h1>
+		<div class="item">
+		<h2>Chucrute </h2>
+			<h:graphicImage library="img" name="/ALEMANHA/chucrute.jpg"
+				styleClass="img-responsive" />
+		</div>
+		
+			<div class="item">
+			<h:graphicImage library="img" name="/ALEMANHA/chucrute.jpg"
+				styleClass="img-responsive" />
+		</div>
+
+	</ui:define>
+
+
+	<ui:define name="footer">
+	    Add your footer here or delete to use the default
+	</ui:define>
+</ui:composition>
+</html>
