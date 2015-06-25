@@ -26,27 +26,25 @@
 
 			<h:form>
 				<h:panelGroup rendered="#{not empty mesaMB.mesa.id}">
-					<h:outputLabel value="ID" />
+					<h:outputLabel value="Mesa" />
 					<h:inputText styleClass="form-control" value="#{mesaMB.mesa.id}"
 						readonly="true" />
 				</h:panelGroup>
 
 				<fieldset>
-
-
-					<h:inputHidden value="#{mesaMB.mesa.id}" />
-					<h:outputLabel value="Data" />
-					<h:message data-dismiss="alert" styleClass="alert" for="idData" />
-					<h:inputText styleClass="form-control" id="idData"
-						converterMessage="Data Inválida" value="#{mesaMB.mesa.data}">
-						<f:passThroughAttribute name="type" value="datetime-local" />
-						<f:convertDateTime pattern="yyyy-MM-dd'T'HH:mm" />
-					</h:inputText>
-
-
-					<h:outputLabel value="telefone" />
-					<h:inputText styleClass="form-control"
-						value="#{mesaMB.mesa.telefone}" />
+  
+                         
+  
+	                  <h:outputLabel value="Lugares"/>
+			         <h:inputText styleClass="form-control" value="#{mesaMB.mesa.lugares}" />
+			         
+			       <h:outputLabel value="Data"/>  
+				<h:inputText styleClass="form-control" id="idData"
+				converterMessage="Data inválida">
+				<f:passThroughAttribute name="type" value="datetime-local" />
+				<f:convertDateTime pattern="yyyy-MM-dd'T'HH:mm" />
+			</h:inputText>
+	
 					<br />
 					<div>
 						<h:commandButton action="#{mesaMB.salvar()}"

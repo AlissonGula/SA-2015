@@ -12,68 +12,34 @@
 
 		<div class="col-md-12">
 			<h1>
-				Restaurante Olímpio <small>Cadastro de Mesa</small>
+				Restaurante Olímpio <small>Reserva de Mesa</small>
 			</h1>
-		</div>
-
-	</ui:define>
-
-	<ui:define name="header">
-		<div class="col-md-6 ">
-			<h:graphicImage library="img" name="ms.png"
-				styleClass="img-responsive" style="width: 29%" />
-
-			<div class="">
-				<div class="">Faça sua reserva!</div>
-				<br /> <a href="cadastroMesa.xhtml"
-					class="btn btn- btn btn-success"><i class="icon-thumbs-down"></i>
-					Reserve</a>
-
-				<h:graphicImage library="img" name="ms.png"
-					styleClass="img-responsive" style="width: 29%" />
-
-				<div class="">
-					<div class="">Faça sua reserva!</div>
-					<br /> <a href="cadastroMesa.xhtml"
-						class="btn btn- btn btn-success"><i class="icon-thumbs-down"></i>
-						Reserve</a>
-
-				</div>
-			</div>
 		</div>
 
 	</ui:define>
 
 	<ui:define name="content">
 
-		<div class="col-md-6 ">
-			<h:graphicImage library="img" name="ms.png"
+<div class="row">
+     <ui:repeat var="reserva" value="#{mesaMB.mesas}">
+     
+                 	 
+                <div class="col-md-3">				
+                 <h:graphicImage library="img" name="ms.png"
 				styleClass="img-responsive" style="width: 29%" />
-
-			<div class="">
-				<div class="">Faça sua reserva!</div>
-				<br /> <a href="cadastroMesa.xhtml"
-					class="btn btn- btn btn-success"><i class="icon-thumbs-down"></i>
-					Reserve</a>
-
-
-
-				<h:graphicImage library="img" name="ms.png"
-					styleClass="img-responsive" style="width: 29%" />
-
-				<div class="">
-					<div class="">Faça sua reserva!</div>
-					<br /> <a href="cadastroMesa.xhtml"
-						class="btn btn- btn btn-success"><i class="icon-thumbs-down"></i>
-						Reserve</a>
-
-
-				</div>
-			</div>
-		</div>
-
-
-
+				
+				<div>
+						<br>Lugares</br><h:outputText value="#{reserva.lugares}" />
+					</div>
+					
+					<div>
+						<br>Data</br><h:outputText value="#{reserva.data}" />
+					</div>
+					
+					</div>
+            
+</ui:repeat>
+</div>
 	</ui:define>
 
 

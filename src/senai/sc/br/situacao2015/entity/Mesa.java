@@ -21,14 +21,19 @@ public class Mesa {
 		this.nome = nome;
 	}
 	private Date data;
-	private String hora;
-	private String telefone;
-	public String getTelefone() {
-		return telefone;
+	private String disponivel;
+	private String lugares; 
+	
+	
+	
+	public String getLugares() {
+		return lugares;
 	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setLugares(String lugares) {
+		this.lugares = lugares;
 	}
+	
+	
 	@ManyToOne
 	private TipoMesa tipoMesa;
 	
@@ -44,11 +49,12 @@ public class Mesa {
 	public void setData(Date data) {
 		this.data = data;
 	}
-	public String getHora() {
-		return hora;
+	
+	public String getDisponivel() {
+		return disponivel;
 	}
-	public void setHora(String hora) {
-		this.hora = hora;
+	public void setDisponivel(String disponivel) {
+		this.disponivel = disponivel;
 	}
 	public TipoMesa getTipoMesa() {
 		return tipoMesa;
