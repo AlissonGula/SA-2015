@@ -7,20 +7,78 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
-	<ui:define name="header">
-		<div class="col-md-12">
-			<h1>
-				Restaurante Olímpio <small>Sábados!</small>
-			</h1>
-			
+	<ui:define name="page-header">
+	
+	</ui:define>
+	<ui:define name="col1">
+	<h1>Pratos Alemães!</h1>
+		<h2>Sabado <small>11/07/2015</small></h2>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<h:graphicImage library="img" name="CHILE/Ceviche.jpg"
+						styleClass="img-responsive" />
+
+					<div class="caption">
+						<h3>Ceviche</h3>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<h:graphicImage library="img" name="CHILE/chacarero.jpg"
+						styleClass="img-responsive" />
+
+					<div class="caption">
+						<h3>Chacarero</h3>
+						
+					</div>
+				</div>
+
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<h:graphicImage library="img" name="CHILE/completo.jpg"
+						styleClass="img-responsive" />
+
+					<div class="caption">
+						<h3>Completo</h3>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<h:graphicImage library="img" name="CHILE/empanadas-de-queijo.jpg"
+						styleClass="img-responsive" />
+
+					<div class="caption">
+						<h3>Empanadas de Queijo</h3>
+						
+					</div>
+				</div>
+			</div>
 		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<h:graphicImage library="img" name="CHILE/Pastel_Choclo.jpg"
+						styleClass="img-responsive" />
+
+					<div class="caption">
+						<h3>Patel Choclo</h3>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</ui:define>
 	
-	<ui:define name="content">
-	    Add your content here or delete to use the default
-	</ui:define>
-	<ui:define name="footer">
-	    Add your footer here or delete to use the default
-	</ui:define>
+	
+
+	
+	
 </ui:composition>
 </html>

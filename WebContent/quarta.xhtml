@@ -7,20 +7,65 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
-	<ui:define name="header">
-		<div class="col-md-12">
-			<h1>
-				Restaurante Olímpio <small>Quartas Feiras!</small>
-			</h1>
-			
+	<ui:define name="page-header">
+	
+	</ui:define>
+	<ui:define name="col1">
+	<h1>Pratos Alemães!</h1>
+		<h2>Quarta-Feira<small>08/07/2015</small></h2>
+		<div class="row">
+			<div class="col-md-2">
+				<div class="thumbnail">
+					<h:graphicImage library="img" name="AUSTRALIA/BifeAvestruzlaranja.jpg"
+						styleClass="img-responsive" />
+
+					<div class="caption">
+						<h3>Bife de avestruz com laranja</h3>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="thumbnail">
+					<h:graphicImage library="img" name="AUSTRALIA/cremedecaranguejo.jpg"
+						styleClass="img-responsive" />
+
+					<div class="caption">
+						<h3>Creme de Caranguejo</h3>
+						
+					</div>
+				</div>
+
+			</div>
+			<div class="col-md-2">
+				<div class="thumbnail">
+					<h:graphicImage library="img" name="AUSTRALIA/tortaAust.jpg"
+						styleClass="img-responsive" />
+
+					<div class="caption">
+						<h3>Torta Australiana</h3>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="thumbnail">
+					<h:graphicImage library="img" name="AUSTRALIA/WelshRarebit.jpg"
+						styleClass="img-responsive" />
+
+					<div class="caption">
+						<h3>Welsh Rarebit</h3>
+						
+					</div>
+				</div>
+			</div>
 		</div>
+		
+		
 	</ui:define>
 	
-	<ui:define name="content">
-	    Add your content here or delete to use the default
-	</ui:define>
-	<ui:define name="footer">
-	    Add your footer here or delete to use the default
-	</ui:define>
+
+	
+	
 </ui:composition>
 </html>
