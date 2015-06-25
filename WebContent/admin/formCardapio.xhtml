@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templetes/padrao.xhtml">
+	<ui:define name="title">
+		Cardapio
+	</ui:define>
+	<ui:define name="header">
+		Cadastro de Cardapio
+	</ui:define>
+
+	<ui:define name="content">
+		<h:messages globalOnly="true" />
+		
+		<h:form enctype="multipart/form-data">
+			<h:panelGroup rendered="#{not empty cardapioMB.cardapio.id}">
+				<h:outputLabel value="ID" />
+				<h:inputText styleClass="form-control" value="#{cardapioMB.cardapio.id}"
+					readonly="true" />
+			</h:panelGroup>
+
+			<h:inputHidden value="#{cardapioMB.cardapio.id}" />
+			<h:outputLabel value="Nome do Prato: " />
+			
+			<h:message for="idNome" style="color:red;" />
+			<h:inputText id="idNome" styleClass="form-control" value="#{cardapioMB.cardapio.nomePrato}" 
+				required="true" requiredMessage="Preenchimento obrigatório"/>
+				
+				<h:inputHidden value="#{cardapioMB.cardapio.id}" />
+			<h:outputLabel value="Origem do Prato: " />
+			
+				<h:message for="idNome" style="color:red;" />
+			<h:inputText id="idNome" styleClass="form-control" value="#{cardapioMB.cardapio.origemPrato}" 
+				required="true" requiredMessage="Preenchimento obrigatório"/>
+			
+			<h:outputLabel value="Logo" />
+			<h:inputFile styleClass="form-control" value="#{cardapioMB.logo}" />
+			<h:inputHidden styleClass="form-control" value="#{cardapioMB.cardapio.logo}" />
+		
+			
+			<div>
+				<h:commandButton action="#{cardapioMB.salvar()}" value="Salvar"
+					styleClass="btn btn-success" />
+				<button class="btn btn-default" type="reset">Restaurar</button>
+			</div>
+		</h:form>
+	</ui:define>
+				
+</ui:composition>
+</html>
