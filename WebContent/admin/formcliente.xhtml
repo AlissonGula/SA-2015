@@ -8,82 +8,65 @@
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
 
-	<ui:define name="header">
+		<ui:define name="header">
 
 		<div class="col-md-12">
 			<h1>
-				Restaurante Olímpio <small>Cadastro de Cliente</small>
+				Restaurante Olímpio <small>Editar Cliente</small>
 			</h1>
 		</div>
 
 	</ui:define>
 
-
-
 	<ui:define name="content">
 
 				<div class="col-md-6 ">
-
-					<h:form>
-					<h:panelGroup rendered="#{not empty clienteMB.cliente.id}">
+		<h:form>
+			<h:panelGroup rendered="#{not empty clienteMB.cliente.id}">
 				<h:outputLabel value="ID" />
 				<h:inputText styleClass="form-control"
 					value="#{clienteMB.cliente.id}" readonly="true" />
 			</h:panelGroup>
-					
-						<fieldset>
-
-
+			
 			<h:inputHidden value="#{clienteMB.cliente.id}" />
 			<h:outputLabel value="Nome" />
-
-			<h:inputText styleClass="form-control" value="#{clienteMB.cliente.nome}" />
-
+			<h:message for="idNome" style="color:red;" />
 			<h:inputText styleClass="form-control"
 				value="#{clienteMB.cliente.nome}" />
 				
-
-			<h:outputLabel value="Senha "/>
-
-			<h:inputSecret styleClass="form-control" value="#{clienteMB.cliente.senha}" />
-			<h:inputSecret styleClass="form-control"
+			<h:outputLabel value="Senha" />
+			<h:inputText styleClass="form-control"
 				value="#{clienteMB.cliente.senha}" />
 				
-
 			<h:outputLabel value="Cpf" />
 			<h:inputText styleClass="form-control"
 				value="#{clienteMB.cliente.cpf}" />
 				
+				
 			<h:outputLabel value="Telefone" />
 			<h:inputText styleClass="form-control"
 				value="#{clienteMB.cliente.telefone}" />
-			<h:outputLabel value="E-mail" />
+			<h:outputLabel value="email" />
 			<h:inputText styleClass="form-control"
 				value="#{clienteMB.cliente.email}" />
-			<h:outputLabel value="Data de Nascimento" />
+			<h:outputLabel value="dataNascimento" />
 			<h:inputText styleClass="form-control"
 				value="#{clienteMB.cliente.dataNascimento}">
                             <f:convertDateTime locale="pt_BR"/>
 							</h:inputText>
-			<h:outputLabel value="Endereço" />
+			<h:outputLabel value="endereco" />
 			<h:inputText styleClass="form-control"
 				value="#{clienteMB.cliente.endereco}" />
 			<h:outputLabel value="" />
-							<br />
-							<div>
-								<h:commandButton action="#{clienteMB.salvar()}"
-									styleClass="btn btn-success" value="Cadastrar" />
-								<button class="btn btn-default" type="reset">Cancelar</button>
-							</div>
-						</fieldset>
-					</h:form>
-				</div>
-		
+			
+			<div>
+				<h:commandButton action="#{clienteMB.salvar()}" value="Salvar"
+					styleClass="btn btn-success" />
+				<button class="btn btn-default" type="reset">Restaurar</button>
+			</div>
+		</h:form>
+		</div>
 	</ui:define>
-
-
-
-
 
 </ui:composition>
 </html>

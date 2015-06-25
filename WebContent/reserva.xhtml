@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templetes/padrao.xhtml">
+
+	<ui:define name="header">
+
+		<div class="col-md-12">
+			<h1>
+				Restaurante Olímpio <small>Reserva de Mesa</small>
+			</h1>
+		</div>
+
+	</ui:define>
+	
+	<ui:define name="content">
+
+		<div class="col-md-6 ">
+
+			<h:form>
+				<h:panelGroup rendered="#{not empty reservaMB.reserva.id}">
+					<h:outputLabel value="ID" />
+					<h:inputText styleClass="form-control" value="#{reservaMB.reserva.id}"
+						readonly="true" />
+				</h:panelGroup>
+
+				<fieldset>
+  
+	                <h:outputLabel value="Nome " />
+				<h:inputText  styleClass="form-control"  value="#{reservaMB.reserva.nome}" />
+				
+				<h:outputLabel value="Data" />
+					<h:message data-dismiss="alert" styleClass="alert" for="idData" />
+					<h:inputText styleClass="form-control" id="idData"
+						converterMessage="Data Inválida" value="#{reservaMB.reserva.data}">
+						<f:passThroughAttribute name="type" value="datetime-local" />
+						<f:convertDateTime pattern="yyyy-MM-dd'T'HH:mm" />
+					</h:inputText>
+					
+					 
+					
+					<br />
+				
+					
+				
+				</fieldset>
+			</h:form>
+		</div>
+
+	</ui:define>
+
+</ui:composition>
+</html>

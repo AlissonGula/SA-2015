@@ -12,7 +12,7 @@
 
 		<div class="col-md-12">
 			<h1>
-				Restaurante Olímpio <small>Lista de Funcionario</small>
+				Restaurante Olímpio <small>Lista de Mesa</small>
 			</h1>
 		</div>
 
@@ -21,25 +21,33 @@
 		
 		
 		<h:form>
-			<h:dataTable styleClass="table" value="#{funcionarioMB.funcionarios}" var="item">
+			<h:dataTable styleClass="table" value="#{mesaMB.mesas}" var="item">
 				<h:column>
 					<f:facet name="header">ID</f:facet>
 					<h:outputText value="#{item.id}" />
 				</h:column>
 
+
 				<h:column>
-					<f:facet name="header">Nome</f:facet>
-					<h:outputText value="#{item.nome}" />
+					<f:facet name="header">Data</f:facet>
+					<h:outputText value="#{item.data}" />
+				</h:column>
+				
+				
+				
+				<h:column>
+					<f:facet name="header">Telefone</f:facet>
+					<h:outputText value="#{item.telefone}" />
 				</h:column>
 
 				<h:column>
 					<h:commandLink styleClass="btn btn-info"
-						action="#{funcionarioMB.editar(item.id)}">
+						action="#{mesaMB.editar(item.id)}">
 						<span class="glyphicon glyphicon-edit"></span>
 					</h:commandLink>
 					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
-					<h:commandLink styleClass="btn btn-danger" onclick="return confirm('O funcionario será excluido');"
-						action="#{funcionarioMB.excluir(item.id)}">
+					<h:commandLink styleClass="btn btn-danger" onclick="return confirm('Sua reserva será excluida!');"
+						action="#{mesaMB.excluir(item.id)}">
 						<span class="glyphicon glyphicon-trash"></span>
 					</h:commandLink>
 				</h:column>

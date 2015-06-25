@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templetes/padrao.xhtml">
+
+	<ui:define name="header">
+
+		<div class="col-md-12">
+			<h1>
+				Restaurante Olímpio <small>Lista de Funcionário</small>
+			</h1>
+		</div>
+
+	</ui:define>
+	<ui:define name="content">
+
+
+		<h:form>
+			<h:dataTable styleClass="table" value="#{funcionarioMB.funcionarios}"
+				var="item">
+				<h:column>
+					<f:facet name="header">ID</f:facet>
+					<h:outputText value="#{item.id}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">Nome</f:facet>
+					<h:outputText value="#{item.nome}" />
+				</h:column>
+
+				<h:column>
+					<h:commandLink styleClass="btn btn-info"
+						action="#{funcionarioMB.editar(item.id)}">
+						<span class="glyphicon glyphicon-edit"></span>
+					</h:commandLink>
+					
+					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
+					<h:commandLink styleClass="btn btn-danger"
+						onclick="return confirm('O funcionario será excluido');"
+						action="#{funcionarioMB.excluir(item.id)}">
+						<span class="glyphicon glyphicon-trash"></span>
+					</h:commandLink>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>
