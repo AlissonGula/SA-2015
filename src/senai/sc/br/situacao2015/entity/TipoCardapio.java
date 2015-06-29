@@ -9,6 +9,9 @@ public class TipoCardapio {
 	private long id;
 	private String nomePrato;
 	private String origemPrato;
+	private String Semana;
+	private String dia;
+	private String logo;
 	private String rotulo;
 
 	
@@ -35,6 +38,24 @@ public class TipoCardapio {
 	}
 	public void setOrigemPrato(String origemPrato) {
 		this.origemPrato = origemPrato;
+	}
+	public String getSemana() {
+		return Semana;
+	}
+	public void setSemana(String semana) {
+		Semana = semana;
+	}
+	public String getDia() {
+		return dia;
+	}
+	public void setDia(String dia) {
+		this.dia = dia;
+	}
+	public String getLogo() {
+		return logo;
+	}
+	public void setLogo(String logo) {
+		this.logo = logo;
 	}
 	
 	

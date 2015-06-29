@@ -16,33 +16,53 @@
 
 	<ui:define name="content">
 		<h:messages globalOnly="true" />
-		
+
 		<h:form enctype="multipart/form-data">
 			<h:panelGroup rendered="#{not empty cardapioMB.cardapio.id}">
 				<h:outputLabel value="ID" />
-				<h:inputText styleClass="form-control" value="#{cardapioMB.cardapio.id}"
-					readonly="true" />
+				<h:inputText styleClass="form-control"
+					value="#{cardapioMB.cardapio.id}" readonly="true" />
 			</h:panelGroup>
 
-			<h:inputHidden value="#{cardapioMB.cardapio.id}" />
+			<h:inputHidden value="#{cardapioMB.cardapio.nomePrato}" />
 			<h:outputLabel value="Nome do Prato: " />
-			
+
 			<h:message for="idNome" style="color:red;" />
-			<h:inputText id="idNome" styleClass="form-control" value="#{cardapioMB.cardapio.nomePrato}" 
-				required="true" requiredMessage="Preenchimento obrigatório"/>
-				
-				<h:inputHidden value="#{cardapioMB.cardapio.id}" />
+			<h:inputText id="idNome" styleClass="form-control"
+				value="#{cardapioMB.cardapio.nomePrato}" required="true"
+				requiredMessage="Preenchimento obrigatório" />
+
+			<h:inputHidden value="#{cardapioMB.cardapio.origemPrato}" />
 			<h:outputLabel value="Origem do Prato: " />
-			
-				<h:message for="idNome" style="color:red;" />
-			<h:inputText id="idNome" styleClass="form-control" value="#{cardapioMB.cardapio.origemPrato}" 
-				required="true" requiredMessage="Preenchimento obrigatório"/>
-			
+
+			<h:message for="idNome" style="color:red;" />
+			<h:inputText id="idNome" styleClass="form-control"
+				value="#{cardapioMB.cardapio.origemPrato}" required="true"
+				requiredMessage="Preenchimento obrigatório" />
+
+
+			<h:inputHidden value="#{cardapioMB.cardapio.semana}" />
+			<h:outputLabel value="Semana: " />
+
+			<h:message for="idNome" style="color:red;" />
+			<h:inputText id="idNome" styleClass="form-control"
+				value="#{cardapioMB.cardapio.semana}" required="true"
+				requiredMessage="Preenchimento obrigatório" />
+
+			<h:inputHidden value="#{cardapioMB.cardapio.dia}" />
+			<h:outputLabel value="Dia: " />
+
+			<h:message for="idNome" style="color:red;" />
+			<h:inputText id="idNome" styleClass="form-control"
+				value="#{cardapioMB.cardapio.dia}" required="true"
+				requiredMessage="Preenchimento obrigatório" />
+
 			<h:outputLabel value="Logo" />
-			<h:inputFile styleClass="form-control" value="#{cardapioMB.logo}" />
-			<h:inputHidden styleClass="form-control" value="#{cardapioMB.cardapio.logo}" />
-		
-			
+			<h:inputFile styleClass="form-control" value="#{cardapioMB.cardapio.logo}" />
+			<h:inputHidden styleClass="form-control"
+				value="#{cardapioMB.cardapio.logo}" />
+
+
 			<div>
 				<h:commandButton action="#{cardapioMB.salvar()}" value="Salvar"
 					styleClass="btn btn-success" />
@@ -50,6 +70,6 @@
 			</div>
 		</h:form>
 	</ui:define>
-				
+
 </ui:composition>
 </html>

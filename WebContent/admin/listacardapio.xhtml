@@ -7,47 +7,46 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
-<ui:define name="title">
-	Cardapio
-</ui:define>
-<ui:define name="header">
-
-	Lista de Cardapios
+	<ui:define name="title">
+	    Cardapio
+	</ui:define>
+	<ui:define name="header">
+	    Lista de Cardapio
 	</ui:define>
 	<ui:define name="content">
-		
-		
+
+		<h:messages />
 		<h:form>
-			<h:dataTable styleClass="table" value="#{cardapioMB.cardapios}" var="item">
+			<h:dataTable styleClass="table" value="#{cardapioMB.cardapio}" var="item">
 				<h:column>
 					<f:facet name="header">ID</f:facet>
 					<h:outputText value="#{item.id}" />
 				</h:column>
-					
-				<h:column>
-					<f:facet name="header">Nome do Prato</f:facet>
-					<h:outputText value="#{item.nomePrato}" />
-				</h:column>
 
-				<h:column>
-					<f:facet name="header">Origem do Prato</f:facet>
-					<h:outputText value="#{item.origemPrato}" />
-				</h:column>
-				
 				<h:column>
 					<f:facet name="header">Logo</f:facet>
 					<h:graphicImage rendered="#{not empty item.logo}" url="#{cardapioMB.caminhoUpload(item.logo)}" />
 				</h:column>
+
+				<h:column>
+					<f:facet name="header">Nome do Prato</f:facet>
+					<h:outputText value="#{item.nomePrato}" />
+				</h:column>
 				
 				<h:column>
-					<h:commandLink styleClass="btn btn-info" />
-					<h:commandLink styleClass="btn btn-danger"  onclick="return confirm('O cardápio será editado!');"
+					<f:facet name="header">Origem do Prato</f:facet>
+					<h:outputText value="#{item.origemPrato}" />
+				</h:column>
+
+				<h:column>
+					<h:commandLink styleClass="btn btn-info"
 						action="#{cardapioMB.editar(item.id)}">
 						<span class="glyphicon glyphicon-edit"></span>
 					</h:commandLink>
 					
 					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
-					<h:commandLink styleClass="btn btn-danger"  onclick="return confirm('O Cardápio será excluido!');"
+					<h:commandLink styleClass="btn btn-warning"
+						onclick="return confirm('Tem certeza?');"
 						action="#{cardapioMB.excluir(item.id)}">
 						<span class="glyphicon glyphicon-trash"></span>
 					</h:commandLink>
@@ -55,6 +54,5 @@
 			</h:dataTable>
 		</h:form>
 	</ui:define>
-
 </ui:composition>
 </html>

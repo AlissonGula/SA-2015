@@ -10,6 +10,8 @@ public class Cardapio {
 	private long id;
 	private String nomePrato;
 	private String origemPrato;
+	private String Semana;
+	private String dia;
 	private String logo;
 	@ManyToOne
 	private TipoCardapio tipoCardapio;
@@ -45,6 +47,18 @@ public class Cardapio {
 	}
 	public void setOrigemPrato(String origemPrato) {
 		this.origemPrato = origemPrato;
+	}
+	public String getSemana() {
+		return Semana;
+	}
+	public void setSemana(String semana) {
+		Semana = semana;
+	}
+	public String getDia() {
+		return dia;
+	}
+	public void setDia(String dia) {
+		this.dia = dia;
 	}
 	
 	

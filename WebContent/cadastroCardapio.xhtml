@@ -43,6 +43,22 @@
 				<h:message for="idOrigem" style="color:red;" />
 			<h:inputText id="idOrigem" styleClass="form-control" value="#{cardapioMB.cardapio.nomePrato}" 
 				required="true" requiredMessage="Preenchimento obrigatório"/>
+				
+				<h:inputHidden value="#{cardapioMB.cardapio.id}" />
+			<h:outputLabel value="Semana: " />
+
+			<h:message for="idSemana" style="color:red;" />
+			<h:inputText id="idSemana" styleClass="form-control"
+				value="#{cardapioMB.cardapio.dia}" required="true"
+				requiredMessage="Preenchimento obrigatório" />
+				
+				<h:inputHidden value="#{cardapioMB.cardapio.id}" />
+			<h:outputLabel value="Dia: " />
+
+			<h:message for="idDia" style="color:red;" />
+			<h:inputText id="idDia" styleClass="form-control"
+				value="#{cardapioMB.cardapio.dia}" required="true"
+				requiredMessage="Preenchimento obrigatório" />
 			
 			<h:outputLabel value="Logo" />
 			<h:inputFile styleClass="form-control" value="#{cardapioMB.logo}" />

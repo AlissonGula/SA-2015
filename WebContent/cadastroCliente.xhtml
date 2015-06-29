@@ -22,63 +22,81 @@
 
 	<ui:define name="content">
 
-				<div class="col-md-6 ">
+		<div class="col-md-6 ">
+			<h:messages globalOnly="true" />
 
-					<h:form>
-					<h:panelGroup rendered="#{not empty clienteMB.cliente.id}">
-				<h:outputLabel value="ID" />
-				<h:inputText styleClass="form-control"
-					value="#{clienteMB.cliente.id}" readonly="true" />
-			</h:panelGroup>
+			<h:form>
+				<h:panelGroup rendered="#{not empty clienteMB.cliente.id}">
+					<h:outputLabel value="ID" />
+					<h:inputText styleClass="form-control"
+						value="#{clienteMB.cliente.id}" readonly="true" />
+				</h:panelGroup>
+
+				<fieldset>
+
+					<h:inputHidden value="#{clienteMB.cliente.id}" />
 					
-						<fieldset>
+					<h:outputLabel value="Nome" />
+					<h:message for="idNome" style="color:red;" />
+					
+					<h:inputText id="idNome" styleClass="form-control"
+						value="#{clienteMB.cliente.nome}" required="true" requiredMessage="Preenchimento obrigatório" />
+
+					
 
 
-			<h:inputHidden value="#{clienteMB.cliente.id}" />
-			<h:outputLabel value="Nome" />
-
-			<h:inputText styleClass="form-control" value="#{clienteMB.cliente.nome}" />
-
-			<h:inputText styleClass="form-control"
-				value="#{clienteMB.cliente.nome}" />
+					<h:outputLabel value="Senha " />
+					<h:message for="idSenha" style="color:red;" />
+					<h:inputSecret id="idSenha" styleClass="form-control"
+						value="#{clienteMB.cliente.senha}"  required="true" requiredMessage="Preenchimento obrigatório" />
+					
 				
 
-			<h:outputLabel value="Senha "/>
 
-			<h:inputSecret styleClass="form-control" value="#{clienteMB.cliente.senha}" />
-			<h:inputSecret styleClass="form-control"
-				value="#{clienteMB.cliente.senha}" />
-				
+					<h:outputLabel value="Cpf" />
+					<h:message for="idCpf" style="color:red;" />
+					<h:inputText styleClass="form-control"
+						value="#{clienteMB.cliente.cpf}" required="true" requiredMessage="Preenchimento obrigatório" />
+						
+						
+						
 
-			<h:outputLabel value="Cpf" />
-			<h:inputText styleClass="form-control"
-				value="#{clienteMB.cliente.cpf}" />
-				
-			<h:outputLabel value="Telefone" />
-			<h:inputText styleClass="form-control"
-				value="#{clienteMB.cliente.telefone}" />
-			<h:outputLabel value="E-mail" />
-			<h:inputText styleClass="form-control"
-				value="#{clienteMB.cliente.email}" />
-			<h:outputLabel value="Data de Nascimento" />
-			<h:inputText styleClass="form-control"
-				value="#{clienteMB.cliente.dataNascimento}">
-                            <f:convertDateTime locale="pt_BR"/>
-							</h:inputText>
-			<h:outputLabel value="Endereço" />
-			<h:inputText styleClass="form-control"
-				value="#{clienteMB.cliente.endereco}" />
-			<h:outputLabel value="" />
-							<br />
-							<div>
-								<h:commandButton action="#{clienteMB.salvar()}"
-									styleClass="btn btn-success" value="Cadastrar" />
-								<button class="btn btn-default" type="reset">Cancelar</button>
-							</div>
-						</fieldset>
-					</h:form>
-				</div>
-		
+					<h:outputLabel value="Telefone" />
+					<h:message for="idTelefone" style="color:red;" />
+					<h:inputText styleClass="form-control"
+						value="#{clienteMB.cliente.telefone}" required="true" requiredMessage="Preenchimento obrigatório"/>
+					
+						
+					<h:outputLabel value="E-mail" />
+					<h:message for="idTelefone" style="color:red;" />
+					<h:inputText styleClass="form-control"
+						value="#{clienteMB.cliente.email}" required="true" requiredMessage="Preenchimento obrigatório"/>
+						
+						
+						<h:outputLabel value="Data de Nascimento" />
+					<h:inputText styleClass="form-control"
+						value="#{clienteMB.cliente.dataNascimento}">
+						<f:convertDateTime locale="pt_BR" />
+					</h:inputText>
+						
+					
+					
+					
+					<h:outputLabel value="Endereço" />
+					<h:message for="idEndereco" style="color:red;" />
+					<h:inputText styleClass="form-control"
+						value="#{clienteMB.cliente.endereco}" required="true" requiredMessage="Preenchimento obrigatório"/>
+					<h:outputLabel value="" />
+					<br />
+					<div>
+						<h:commandButton action="#{clienteMB.salvar()}"
+							styleClass="btn btn-success" value="Cadastrar" />
+						<button class="btn btn-default" type="reset">Cancelar</button>
+					</div>
+				</fieldset>
+			</h:form>
+		</div>
+
 	</ui:define>
 
 
