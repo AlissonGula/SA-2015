@@ -482,6 +482,24 @@
 	
 	</div>
 	
+	<div class="row">
+			<ui:repeat var="cardapio" value="#{cardapioMB.cardapios}">
+				<div class="col-md-3">
+				<div class="thumbnail">
+					<h:graphicImage url="#{cardapioMB.caminhoUpload(cardapio.logo)}" />
+					<div>
+						<h:outputText value="#{cardapio.origemPrato}" />
+					</div>
+					
+				</div>
+</div>	
+			</ui:repeat>
+		</div>
+	
 	</ui:define>
+	
+		
+
+
 </ui:composition>
 </html>
