@@ -30,7 +30,7 @@ public class CardapioMB {
 		public void initMB() {
 			this.cardapio = new Cardapio();
 			cardapioDao = new CardapioDao();
-			uploadImageUtil = new UploadImageUtil("img/uploads/");
+			uploadImageUtil = new UploadImageUtil("/img/");
 		}
 
 		public Cardapio getCardapio() {

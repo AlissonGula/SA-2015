@@ -2,7 +2,7 @@
     <wb-module deploy-name="SA-2015-RO">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="ro"/>
         <property name="java-output-path" value="/SA-2015-RO/build/classes"/>
+        <property name="context-root" value="ro"/>
     </wb-module>
 </project-modules>

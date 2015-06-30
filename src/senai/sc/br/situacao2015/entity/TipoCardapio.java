@@ -1,8 +1,9 @@
 package senai.sc.br.situacao2015.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+@Entity
 public class TipoCardapio {
 	@Id
 	@GeneratedValue

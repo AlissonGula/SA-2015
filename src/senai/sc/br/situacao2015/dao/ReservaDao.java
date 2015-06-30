@@ -15,7 +15,7 @@ public class ReservaDao extends Dao{
 
 	@SuppressWarnings("unchecked")
 	public List<Reserva> listarTodos() {
-		Query query = getEntityManager().createQuery("From Rserva",Reserva.class);
+		Query query = getEntityManager().createQuery("From Reserva",Reserva.class);
 		return query.getResultList();
 	}
 
