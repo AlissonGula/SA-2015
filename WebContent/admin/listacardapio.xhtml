@@ -25,7 +25,7 @@
 
 				<h:column>
 					<f:facet name="header">Logo</f:facet>
-					<h:graphicImage rendered="#{not empty item.logo}" url="#{cardapioMB.caminhoUpload(item.logo)}" />
+					<h:graphicImage rendered="#{not empty item.logo}"  style="height:40px; width:auto;" url="#{cardapioMB.caminhoUpload(item.logo)}" />
 				</h:column>
 
 				<h:column>
@@ -36,6 +36,13 @@
 				<h:column>
 					<f:facet name="header">Origem do Prato</f:facet>
 					<h:outputText value="#{item.origemPrato}" />
+				</h:column>
+				
+				
+				
+				<h:column>
+					<f:facet name="header">Dia</f:facet>
+					<h:outputText value="#{item.dia}" />
 				</h:column>
 
 				<h:column>

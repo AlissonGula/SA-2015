@@ -20,7 +20,8 @@
 
 	<ui:define name="content">
 
-<div class="row">
+<div class="col-md-8">
+
      <ui:repeat var="reserva" value="#{mesaMB.mesas}">
      
                  	 
@@ -29,20 +30,50 @@
 				styleClass="img-responsive" style="width: 29%" />
 				
 				<div>
-						<br>Lugares</br><h:outputText value="#{reserva.lugares}" />
+						<br>Lugares:</br><h:outputText value="#{reserva.lugares}" />
 					</div>
 					
 					<div>
-						<br>Data</br><h:outputText value="#{reserva.data}" />
+						<br>Data:</br>
+						<h:outputText value="#{reserva.data}"/>
 					</div>
 					
 					</div>
             
 </ui:repeat>
 </div>
+
+
+
+
+<div class="col-md-4">
+							<h2>Contatos</h2>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<span class="glyphicon glyphicon-phone-alt"></span>
+									(48) 3206-1480
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<span class="glyphicon glyphicon-phone"></span>
+									(48) 9415-2503
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<span class="glyphicon glyphicon-envelope"></span>
+									sg.comidas@gmail.com
+								</div>
+							</div>
+					</div>
+
+	
+
+	
+	
 	</ui:define>
 
-
-
+	
 </ui:composition>
 </html>
