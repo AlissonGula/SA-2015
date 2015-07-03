@@ -7,7 +7,9 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
-
+<ui:define name="title">
+	    - Cadastro Cliente
+	</ui:define>
 	<ui:define name="header">
 
 		<div class="col-md-12">
@@ -53,44 +55,51 @@
 				
 
 
-					<h:outputLabel value="Cpf:" />
+				
+						
+						<h:outputLabel value="Cpf:" />
 					<h:message for="idCpf" style="color:red;" />
-					<h:inputText styleClass="form-control"
-						value="#{clienteMB.cliente.cpf}" required="true" requiredMessage="Preenchimento obrigatório" />
+					<h:inputText id="idCpf" styleClass="form-control"
+						value="#{clienteMB.cliente.cpf}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
 						
 						
-						
-
-					<h:outputLabel value="Telefone:" />
+							<h:outputLabel value="Telefone:" />
 					<h:message for="idTelefone" style="color:red;" />
-					<h:inputText styleClass="form-control"
-						value="#{clienteMB.cliente.telefone}" required="true" requiredMessage="Preenchimento obrigatório"/>
+					<h:inputText id="idTelefone" styleClass="form-control"
+						value="#{clienteMB.cliente.telefone}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+						
+							<h:outputLabel value="E-mail:" />
+					<h:message for="idEmail" style="color:red;" />
+					<h:inputText id="idEmail" styleClass="form-control"
+						value="#{clienteMB.cliente.email}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
 					
 						
-					<h:outputLabel value="E-mail:" />
-					<h:message for="idTelefone" style="color:red;" />
-					<h:inputText styleClass="form-control"
-						value="#{clienteMB.cliente.email}" required="true" requiredMessage="Preenchimento obrigatório"/>
 						
 						
-						<h:outputLabel value="Data de Nascimento:" />
-					<h:inputText styleClass="form-control"
+					<h:outputLabel value="Data de Nascimento:" />
+					<h:message for="idDataNascimento" style="color:red;" />
+					<h:inputText id ="idDataNascimento" styleClass="form-control"
 						value="#{clienteMB.cliente.dataNascimento}">
 						<f:convertDateTime locale="pt_BR" />
 					</h:inputText>
 						
+						
 					
-					
-					
-					<h:outputLabel value="Endereço:" />
+						<h:outputLabel value="Endereço:" />
 					<h:message for="idEndereco" style="color:red;" />
-					<h:inputText styleClass="form-control"
-						value="#{clienteMB.cliente.endereco}" required="true" requiredMessage="Preenchimento obrigatório"/>
-					<h:outputLabel value="" />
+					<h:inputText id="idEndereco" styleClass="form-control"
+						value="#{clienteMB.cliente.endereco}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+					
+					
+					
 					<br />
 					<div>
 						<h:commandButton action="#{clienteMB.salvar()}"
-							styleClass="btn btn-success" value="Cadastrar" />
+							styleClass="btn btn-success" value="Cadastrar" onclick="return confirm('Deseja cadastrar-se?');" />
 						<button class="btn btn-default" type="reset">Cancelar</button>
 					</div>
 				</fieldset>

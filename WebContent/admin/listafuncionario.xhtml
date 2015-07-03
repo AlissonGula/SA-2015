@@ -7,7 +7,9 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
-
+<ui:define name="title">
+	    - Listas de Funcionario
+	</ui:define>
 	<ui:define name="header">
 
 		<div class="col-md-12">
@@ -33,10 +35,7 @@
 					<h:outputText value="#{item.nome}" />
 				</h:column>
 
-<h:column>
-					<f:facet name="header">Data</f:facet>
-					<h:outputText value="#{item.dataNascimento}" />
-				</h:column>
+
            
 				<h:column>
 					<h:commandLink styleClass="btn btn-info"

@@ -7,7 +7,9 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
-
+<ui:define name="title">
+	    - Editar Funcionario
+	</ui:define>
 		<ui:define name="header">
 
 		<div class="col-md-12">
@@ -19,49 +21,84 @@
 	</ui:define>
 
 	<ui:define name="content">
-	
-				<div class="col-md-6 ">
-		<h:form>
-			<h:panelGroup rendered="#{not empty funcionarioMB.funcionario.id}">
-				<h:outputLabel value="ID" />
-				<h:inputText styleClass="form-control"
-					value="#{funcionarioMB.funcionario.id}" readonly="true" />
-			</h:panelGroup>
 
-			<h:inputHidden value="#{funcionarioMB.funcionario.id}" />
-			<h:outputLabel value="Nome" />
-			<h:inputText styleClass="form-control"
-				value="#{funcionarioMB.funcionario.nome}" />
-			<h:outputLabel value="Senha" />
-			<h:inputText styleClass="form-control"
-				value="#{funcionarioMB.funcionario.senha}" />
-			<h:outputLabel value="Cpf" />
-			<h:inputText styleClass="form-control"
-				value="#{funcionarioMB.funcionario.cpf}" />
-			<h:outputLabel value="Telefone" />
-			<h:inputText styleClass="form-control"
-				value="{#funcionarioMB.funcionario.telefone}" />
-			<h:outputLabel value="email" />
-			<h:inputText styleClass="form-control"
-				value="#{funcionarioMB.funcionario.email}" />
-			<h:outputLabel value="dataNascimento" />
-			<h:inputText styleClass="form-control"
-				value="#{funcionarioMB.funcionario.dataNascimento}">
-                            <f:convertDateTime locale="pt_BR"/>
-							</h:inputText>
-			<h:outputLabel value="endereco" />
-			<h:inputText styleClass="form-control"
-				value="#{funcionarioMB.funcionario.endereco}" />
-			<h:outputLabel value="" />
-			
-			<div>
-				<h:commandButton action="#{funcionarioMB.salvar()}" value="Salvar"
-					styleClass="btn btn-success" />
-				<button class="btn btn-default" type="reset">Restaurar</button>
-			</div>
-		</h:form>
+				<div class="col-md-6 ">
+			<h:messages globalOnly="true" />
+
+			<h:form>
+				<h:panelGroup rendered="#{not empty funcionarioMB.funcionario.id}">
+					<h:outputLabel value="ID" />
+					<h:inputText styleClass="form-control"
+						value="#{funcionarioMB.funcionario.id}" readonly="true" />
+				</h:panelGroup>
+
+				<fieldset>
+
+					<h:inputHidden value="#{funcionarioMB.funcionario.id}" />
+					
+					<h:outputLabel value="Nome:" />
+					<h:message for="idNome" style="color:red;" />	
+					<h:inputText id="idNome" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.nome}" required="true" requiredMessage="Preenchimento obrigatório" />
+
+
+					<h:outputLabel value="Senha: " />
+					<h:message for="idSenha" style="color:red;" />
+					<h:inputSecret id="idSenha" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.senha}"  required="true" requiredMessage="Preenchimento obrigatório" />
+					
+						
+						<h:outputLabel value="Cpf:" />
+					<h:message for="idCpf" style="color:red;" />
+					<h:inputText id="idCpf" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.cpf}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+						
+						
+							<h:outputLabel value="Telefone:" />
+					<h:message for="idTelefone" style="color:red;" />
+					<h:inputText id="idTelefone" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.telefone}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+						
+							<h:outputLabel value="E-mail:" />
+					<h:message for="idEmail" style="color:red;" />
+					<h:inputText id="idEmail" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.email}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+					
+						
+						
+						
+					<h:outputLabel value="Data de Nascimento:" />
+					<h:message for="idDataNascimento" style="color:red;" />
+					<h:inputText id ="idDataNascimento" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.dataNascimento}">
+						<f:convertDateTime locale="pt_BR" />
+					</h:inputText>
+						
+						
+					
+						<h:outputLabel value="Endereço:" />
+					<h:message for="idEndereco" style="color:red;" />
+					<h:inputText id="idEndereco" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.endereco}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+					
+					
+					
+					<br />
+					<div>
+						<h:commandButton action="#{funcionarioMB.salvar()}"
+							styleClass="btn btn-success" value="Salvar" onclick="return confirm('Deseja salvar as alterações?');" />
+						<button class="btn btn-default" type="reset">Cancelar</button>
+					</div>
+				</fieldset>
+			</h:form>
 		</div>
-	</ui:define>
+
+
+</ui:define>
 
 </ui:composition>
 </html>

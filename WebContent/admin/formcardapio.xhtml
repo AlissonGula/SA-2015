@@ -7,6 +7,11 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
+
+         <ui:define name="title">
+	    - Editar cardapio
+	</ui:define>
+	
 <ui:define name="header">
 
 		<div class="col-md-12">
@@ -17,7 +22,8 @@
 
 	<ui:define name="content">
 	
-	<div class="col-md-6 ">
+	
+		<div class="col-md-6 ">
 
 			<h:messages globalOnly="true" />
 
@@ -38,59 +44,40 @@
 						requiredMessage="Preenchimento obrigatório" />
 
 
-
-					<h:outputLabel value="Origem do Prato" />
+					
+					<h:outputLabel value="Origem do Prato:" />
 					<h:message for="idOrigemPrato" style="color:red;" />
 					<h:inputText id="idOrigemPrato" styleClass="form-control"
 						value="#{cardapioMB.cardapio.origemPrato}" required="true"
 						requiredMessage="Preenchimento obrigatório" />
 
+                     
+                     	<h:outputLabel value="Dia:" />
+					<h:message for="idDia" style="color:red;" />
+					<h:inputText id="idDia" styleClass="form-control"
+						value="#{cardapioMB.cardapio.dia}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
 
 
-
-					<h:outputLabel value="Semana: " />
-					<h:message for="idSemana" style="color:red;" />
-					<select name="" size="1">
-						<option value="">Escolha a semana</option>
-						<option value="1">Semana 1</option>
-						<option value="2">Semana 2</option>
-						<option value="3">Semana 3</option>
-						<option value="4">Semana 4</option>
-
-					</select>
-				
-
-
-						<h:outputLabel value="Dia: " />
-					<h:message for="idSemana" style="color:red;" />
-					<select name="" size="1">
-						<option value="1">Segunda-Feira</option>
-						<option value="2">Terca-Feira</option>
-						<option value="3">Quarta-Feira </option>
-						<option value="4">Quinta-Feira</option>
-						<option value="1">Sexta-Feira</option>
-						<option value="1">Sabado</option>
-						<option value="1">Domingo</option>				
-
-					</select>
 					
 					<br/>
-
 
 					<h:outputLabel value="Logo:" />
 					<h:inputFile styleClass="form-control" value="#{cardapioMB.logo}" />
 					<h:inputHidden styleClass="form-control"
 						value="#{cardapioMB.cardapio.logo}" />
+<br/>
 
 					<div>
-			
-				<h:commandButton action="#{cardapioMB.salvar()}" value="Salvar"
-					styleClass="btn btn-success" />
-				<button class="btn btn-default" type="reset">Restaurar</button>
-			</div>
-			</fieldset>
-		</h:form>
+						<h:commandButton action="#{cardapioMB.salvar()}" value="Salvar"
+							styleClass="btn btn-success" onclick="return confirm('Deseja salvar as alterações?');" />
+						<button class="btn btn-default" type="reset">Restaurar</button>
+					</div>
+
+				</fieldset>
+			</h:form>
 		</div>
+
 	</ui:define>
 
 </ui:composition>

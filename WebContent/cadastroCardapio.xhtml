@@ -8,6 +8,10 @@
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
 
+<ui:define name="title">
+	    - Cadastro Cardapio
+	</ui:define>
+
 	<ui:define name="header">
 
 		<div class="col-md-12"></div>
@@ -64,7 +68,11 @@
 
 					<div>
 						<h:commandButton action="#{cardapioMB.salvar()}" value="Cadastrar"
-							styleClass="btn btn-success" />
+							styleClass="btn btn-success" onclick="return confirm('Deseja Salvar cadastro?');" />
+						
+						
+						
+						
 						<button class="btn btn-default" type="reset">Restaurar</button>
 					</div>
 

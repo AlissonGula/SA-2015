@@ -8,6 +8,10 @@
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
 
+<ui:define name="title">
+	    - Cadastro Mesa
+	</ui:define>
+
 	<ui:define name="header">
 
 		<div class="col-md-12">
@@ -34,9 +38,11 @@
 				<fieldset>
   
                          
-  
-	                  <h:outputLabel value="Lugares:"/>
-			         <h:inputText styleClass="form-control" value="#{mesaMB.mesa.lugares}" />
+  <h:outputLabel value="Lugarares:" />
+					<h:message for="idLugares" style="color:red;" />
+					<h:inputText id="idLugares" styleClass="form-control"
+						value="#{mesaMB.mesa.lugares}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
 			         
 			       <h:outputLabel value="Data:"/>  
 					<h:inputText styleClass="form-control" id="idData"
@@ -50,7 +56,7 @@
 					<br />
 					<div>
 						<h:commandButton action="#{mesaMB.salvar()}"
-							styleClass="btn btn-success" value="Cadastrar" />
+							styleClass="btn btn-success" value="Cadastrar"  onclick="return confirm('Deseja cadsatrar essa reserva?');"/>
 						<button class="btn btn-default" type="reset">Cancelar</button>
 					</div>
 				</fieldset>

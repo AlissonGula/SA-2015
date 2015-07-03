@@ -8,6 +8,10 @@
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
 
+<ui:define name="title">
+	    - Editar Mesa
+	</ui:define>
+
 		<ui:define name="header">
 
 		<div class="col-md-12">
@@ -29,13 +33,11 @@
 			</h:panelGroup>
 			<h:inputHidden value="#{mesaMB.mesa.id}" />
 			
-			<h:outputLabel value="Nome" />
-			<h:inputText styleClass="form-control"
-				value="#{mesaMB.mesa.nome}" />
-			<h:outputLabel value="" />
-
-			
-			
+			 <h:outputLabel value="Lugarares:" />
+					<h:message for="idLugares" style="color:red;" />
+					<h:inputText id="idLugares" styleClass="form-control"
+						value="#{mesaMB.mesa.lugares}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
 			
 			<h:outputLabel value="Data" />
 			<h:inputText styleClass="form-control"
@@ -43,13 +45,10 @@
                             <f:convertDateTime locale="pt_BR"/>
 							</h:inputText>
 			
-			<h:outputLabel value="Telefone" />
-			<h:inputText styleClass="form-control"
-				value="#{mesaMB.mesa.telefone}" />
-			<h:outputLabel value="" />
+			
 			<div>
 				<h:commandButton action="#{mesaMB.salvar()}" value="Salvar"
-					styleClass="btn btn-success" />
+					styleClass="btn btn-success" onclick="return confirm('Deseja salvar as alterações?');"/>
 				<button class="btn btn-default" type="reset">Restaurar</button>
 			</div>
 		</h:form>

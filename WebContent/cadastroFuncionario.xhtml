@@ -7,7 +7,9 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="/WEB-INF/templetes/padrao.xhtml">
-
+<ui:define name="title">
+	    - Cadastro Funcionario
+	</ui:define>
 	<ui:define name="header">
 
 		<div class="col-md-12">
@@ -22,10 +24,11 @@
 
 	<ui:define name="content">
 
-		<div class="col-md-6 ">
+				<div class="col-md-6 ">
+			<h:messages globalOnly="true" />
 
 			<h:form>
-				<h:panelGroup rendered="#{not empty clienteMB.cliente.id}">
+				<h:panelGroup rendered="#{not empty funcionarioMB.funcionario.id}">
 					<h:outputLabel value="ID" />
 					<h:inputText styleClass="form-control"
 						value="#{funcionarioMB.funcionario.id}" readonly="true" />
@@ -33,47 +36,71 @@
 
 				<fieldset>
 
-
 					<h:inputHidden value="#{funcionarioMB.funcionario.id}" />
+					
 					<h:outputLabel value="Nome:" />
-					<h:inputText styleClass="form-control"
-						value="#{funcionarioMB.funcionario.nome}" />
-					<h:outputLabel value="Senha:" />
-					<h:inputSecret styleClass="form-control"
-						value="#{funcionarioMB.funcionario.senha}" />
-					<h:outputLabel value="Cpf:" />
-					<h:inputText styleClass="form-control"
-						value="#{funcionarioMB.funcionario.cpf}" />
-					<h:outputLabel value="Telefone:" />
-					<h:inputText styleClass="form-control"
-						value="#{funcionarioMB.funcionario.telefone}" />
-					<h:outputLabel value="E-mail:" />
-					<h:inputText styleClass="form-control"
-						value="#{funcionarioMB.funcionario.email}" />
+					<h:message for="idNome" style="color:red;" />	
+					<h:inputText id="idNome" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.nome}" required="true" requiredMessage="Preenchimento obrigatório" />
+
+
+					<h:outputLabel value="Senha: " />
+					<h:message for="idSenha" style="color:red;" />
+					<h:inputSecret id="idSenha" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.senha}"  required="true" requiredMessage="Preenchimento obrigatório" />
+					
+						
+						<h:outputLabel value="Cpf:" />
+					<h:message for="idCpf" style="color:red;" />
+					<h:inputText id="idCpf" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.cpf}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+						
+						
+							<h:outputLabel value="Telefone:" />
+					<h:message for="idTelefone" style="color:red;" />
+					<h:inputText id="idTelefone" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.telefone}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+						
+							<h:outputLabel value="E-mail:" />
+					<h:message for="idEmail" style="color:red;" />
+					<h:inputText id="idEmail" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.email}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+					
+						
+						
+						
 					<h:outputLabel value="Data de Nascimento:" />
-					<h:inputText styleClass="form-control"
+					<h:message for="idDataNascimento" style="color:red;" />
+					<h:inputText id ="idDataNascimento" styleClass="form-control"
 						value="#{funcionarioMB.funcionario.dataNascimento}">
 						<f:convertDateTime locale="pt_BR" />
 					</h:inputText>
-					<h:outputLabel value="Endereço:" />
-					<h:inputText styleClass="form-control"
-						value="#{funcionarioMB.funcionario.endereco}" />
-					<h:outputLabel value="" />
+						
+						
+					
+						<h:outputLabel value="Endereço:" />
+					<h:message for="idEndereco" style="color:red;" />
+					<h:inputText id="idEndereco" styleClass="form-control"
+						value="#{funcionarioMB.funcionario.endereco}" required="true"
+						requiredMessage="Preenchimento obrigatório" />
+					
+					
+					
 					<br />
 					<div>
 						<h:commandButton action="#{funcionarioMB.salvar()}"
-							styleClass="btn btn-success" value="Cadastrar" />
+							styleClass="btn btn-success" value="Cadastrar" onclick="return confirm('Deseja cadsatrar o funcionário?');" />
 						<button class="btn btn-default" type="reset">Cancelar</button>
 					</div>
 				</fieldset>
 			</h:form>
 		</div>
 
-	</ui:define>
 
-
-
-
+</ui:define>
 
 </ui:composition>
 </html>
